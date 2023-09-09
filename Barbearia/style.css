@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o cabeçalho */
+.site-header {
+    background-color: #333; /* Cor de fundo escura */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento suave */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Aumentar o padding */
+    border: 2px solid #fff; /* Adicionar uma borda branca */
+    border-radius: 20px; /* Tornar o cabeçalho arredondado */
+}
+
+/* Estilo para o título à esquerda */
+.header-title h1 {
+    color: #fff; /* Cor do texto branco */
+    margin: 0;
+    font-size: 24px; /* Aumentar o tamanho da fonte */
+}
+
+/* Estilo para a lista de menus à direita */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline; /* Alinhar os itens lado a lado */
+    margin-right: 20px; /* Espaçamento entre os itens */
+    border: #252525 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0; /* Remover o espaçamento do último item */
+}
+
+.main-nav ul li:hover{
+    background-color: #252525; /* Cor de fundo escura */
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Cor do texto branco */
+    font-weight: bold;
+}
+
+/* Estilo para o ícone do hamburguer */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Estilo para o menu responsivo */
+.menu {
+    display: none; /* Ocultar o menu por padrão */
+}
+
+/* Estilo para o menu responsivo quando aberto */
+.menu-open{
+    display: block; /* Exibir o menu quando a classe .menu-open é adicionada */
+}
+
+
+/* Estilo para os menus responsivos */
+@media (max-width: 768px) {
+    .main-nav ul li {
+        display: block; /* Exibir itens como blocos empilhados */
+        margin-right: 0; /* Remover o espaçamento entre os itens */
+        width: 100%; /* Definir a largura para 100% */
+        border: #252525 1px solid;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center; /* Centralizar o texto */
+        margin-bottom: 5px; /* Espaçamento entre os itens */
+    }
+
+    .main-nav ul li a {
+        display: block; /* Tornar os links em blocos */
+    }
+}
+
+/* Estilo para o formulário */
+#agendamento-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os campos do formulário */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão de envio */
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
